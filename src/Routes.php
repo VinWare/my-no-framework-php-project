@@ -9,7 +9,5 @@ declare(strict_types=1);
 
 return  [
     ['GET', '/hello-world', ['Example\Controllers\Homepage', 'show']],
-    ['GET', '/another-route', function() {
-        echo 'This works too!';
-    }]
+    ['GET', '/{slug}', ['\Example\Controllers\Page', 'show']]
 ];
